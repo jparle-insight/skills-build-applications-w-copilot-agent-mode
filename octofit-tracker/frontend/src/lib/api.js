@@ -9,14 +9,10 @@ function getApiHost() {
 }
 
 export function buildApiUrl(path) {
-  const normalizedPath = path.replace(/^\/+/, '')
+  const normalizedPath = path.replace(/^\//, '')
   const baseUrl = getApiHost()
 
-  if (!normalizedPath) {
-    return `${baseUrl}/api/`
-  }
-
-  return `${baseUrl}/api/${normalizedPath}/`
+  return `${baseUrl}/api/${normalizedPath}`
 }
 
 export async function fetchCollection(resource, fallbackValue) {

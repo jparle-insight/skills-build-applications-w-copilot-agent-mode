@@ -25,11 +25,11 @@ app.get('/health', (_req, res) => {
   res.json({ status: 'ok', apiBaseUrl });
 });
 
-app.get(['/api/users', '/api/users/'], (_req, res) => {
+app.get('/api/users', (_req, res) => {
   res.json({ users, apiBaseUrl });
 });
 
-app.get(['/api/activities', '/api/activities/'], (_req, res) => {
+app.get('/api/activities', (_req, res) => {
   res.json({ activities, apiBaseUrl });
 });
 
